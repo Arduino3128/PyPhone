@@ -28,7 +28,7 @@ pyphone(Database)------> data(Table) ------------> | Phoneno varchar(12)|-------
 `CREATE TABLE data(Phoneno VARCHAR(12), Port VARCHAR(6));`  
 `INSERT INTO data values("<PHONE_NUMBER_AFTER_REG>","<PORTNUMBER*>")`  
   
-*PORTNUMBER will be automatically filled bby the PyPhone.  
+*PORTNUMBER will be automatically filled by the PyPhone.  
   
 ## Gallery
 ![image](images/Image1.png)
