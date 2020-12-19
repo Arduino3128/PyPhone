@@ -21,14 +21,15 @@ Since, PyPhone uses ngrok, it is required to make an account in [ngrok](https://
 Also, PyPhone uses MySQL database for storing the phone numbers and requires additional setup.(This step will not be required once PyPhone's MySQL DB is setup)  
 ### Steps(MySQL DB):
 The MySQL requires the following setup:  
+  
 pyphone(Database)------> data(Table) ------------> | Phoneno varchar(12)|-------------------| Port varchar(6) |  
-
-`CREATE DATABASE pyphone;  
-CREATE TABLE data(Phoneno VARCHAR(12), Port VARCHAR(6));  
-INSERT INTO data values("<PHONE_NUMBER_AFTER_REG>","<PORTNUMBER*>")`  
-
+  
+`CREATE DATABASE pyphone;`  
+`CREATE TABLE data(Phoneno VARCHAR(12), Port VARCHAR(6));`  
+`INSERT INTO data values("<PHONE_NUMBER_AFTER_REG>","<PORTNUMBER*>")`  
+  
 *PORTNUMBER will be automatically filled bby the PyPhone.  
-
+  
 ## Gallery
 ![image](images/Image1.png)
 ![image](images/Image2.png)
