@@ -22,9 +22,9 @@ Also, PyPhone uses MySQL database for storing the phone numbers and requires add
 ### Steps(MySQL DB):
 The MySQL requires the following setup:  
 pyphone------(Database)  
-            |  
+            ||  
            data-----------------(Table)  
-                               |   
+                               ||   
 Phoneno varchar(255)|-------------------| Port varchar(6)            
   
 ## Gallery
