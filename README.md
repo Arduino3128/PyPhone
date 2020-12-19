@@ -11,7 +11,7 @@ PyPhone a Python Based GUI VoIP Calling App which enables Calling over the Inter
 2. Contact Directory.  
 3. Advance Hold Feature.  
 
-### Gallery
+## Gallery
 ![image](images/Image1.png)
 ![image](images/Image2.png)
 ![image](images/Image3.png)
