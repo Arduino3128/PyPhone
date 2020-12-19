@@ -28,7 +28,7 @@ Since, PyPhone uses ngrok, it is required to make an account in [ngrok](https://
 1. Make a file named "ngrok.yml" in the same level as of PyPhone.py and add the following line:  
     `authtoken: <YOUR_NGROK_AUTHTOKEN>`  
 2. "config.cnf" contains the phone number of the user.  
-3. Download [ngrok](https://ngrok.com/download) and paste its executable in the modules folder.   
+3. Download [ngrok](https://ngrok.com/download) and paste its executable in the "modules" folder.   
 Also, PyPhone uses MySQL database for storing the phone numbers and requires additional setup.(This step will not be required once PyPhone's MySQL DB is setup)  
 ### Steps(MySQL DB):
 The MySQL requires the following setup:  
