@@ -12,10 +12,10 @@ PyPhone a Python Based GUI VoIP Calling App which enables Calling over the Inter
 3. Advance Hold Feature.  
   
 ## How to use PyPhone?  
-Since, PyPhone uses ngrok, it is required to make an account in ![ngrok](https://ngrok.com/). PyPhone comes with Ngrok.  
+Since, PyPhone uses ngrok, it is required to make an account in [ngrok](https://ngrok.com/). PyPhone comes with Ngrok.  
 ### Steps:  
 1. Make a file named "ngrok.yml" in the same level as of PyPhone.py and add the following line:  
-    authtoken: <YOUR_NGROK_AUTHTOKEN>  
+    `authtoken: <YOUR_NGROK_AUTHTOKEN>`  
 2. "config.cnf" contains the phone number of the user.  
 3. Run PyPhone.py  
 Also, PyPhone uses MySQL database for storing the phone numbers and requires additional setup.(This step will not be required once PyPhone's MySQL DB is setup)  
@@ -23,9 +23,9 @@ Also, PyPhone uses MySQL database for storing the phone numbers and requires add
 The MySQL requires the following setup:  
 pyphone(Database)------> data(Table) ------------> | Phoneno varchar(12)|-------------------| Port varchar(6) |  
 
-CREATE DATABASE pyphone;  
+`CREATE DATABASE pyphone;  
 CREATE TABLE data(Phoneno VARCHAR(12), Port VARCHAR(6));  
-INSERT INTO data values("<PHONE_NUMBER_AFTER_REG>","<PORTNUMBER*>")  
+INSERT INTO data values("<PHONE_NUMBER_AFTER_REG>","<PORTNUMBER*>")`  
 
 *PORTNUMBER will be automatically filled bby the PyPhone.  
 
