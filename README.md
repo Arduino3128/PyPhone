@@ -3,7 +3,7 @@ Python Based VoIP GUI Calling App
    
 ## What is PyPhone?  
   
-PyPhone a fully Open Sourced Python Based GUI VoIP Calling App which enables Calling over the Internet Free of cost. PyPhone currently uses ngrok for port forwarding enabling call from anywhere around the world, with minor changes can be used as a off-grid Calling Service within LAN. It uses PyQt5 for its GUI.   
+PyPhone is a fully Open Sourced Python Based GUI VoIP Calling App which enables Calling over the Internet Free of cost. PyPhone currently uses ngrok for port forwarding enabling call from anywhere around the world, with minor changes can be used as a off-grid Calling Service within LAN. It uses PyQt5 for its GUI.   
   
 <a title="Open Source Initiative official SVG, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Opensource.svg"><img width="64" alt="Opensource" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Opensource.svg/64px-Opensource.svg.png"></a>   
   
