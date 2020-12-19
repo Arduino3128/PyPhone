@@ -33,11 +33,11 @@ Also, PyPhone uses MySQL database for storing the phone numbers and requires add
 ### Steps(MySQL DB):
 The MySQL requires the following setup:  
   
-pyphone(Database)------> data(Table) ------------> | Phoneno varchar(12)|-------------------| Port varchar(6) |  
+pyphone(Database)------> data(Table) ------------> [Phoneno varchar(12) ------------------ Port varchar(6)]
   
 `CREATE DATABASE pyphone;`  
 `CREATE TABLE data(Phoneno VARCHAR(12), Port VARCHAR(6));`  
-`INSERT INTO data values("<PHONE_NUMBER_AFTER_REG>","<PORTNUMBER*>")`  
+`INSERT INTO data values("<PHONE_NUMBER_AFTER_REG>","<PORTNUMBER*>");`  
   
 *PORTNUMBER will be automatically filled by the PyPhone.  
   
