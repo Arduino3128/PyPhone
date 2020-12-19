@@ -34,3 +34,8 @@ pyphone(Database)------> data(Table) ------------> | Phoneno varchar(12)|-------
 ![image](images/Image1.png)
 ![image](images/Image2.png)
 ![image](images/Image3.png)
+
+### ⚠️ Disclaimer: PyPhone is still in its early phase and is in no way near to a stable release. Also, there is no guarantee of its stablity and is susceptible of crashes. PyPhone still requires proper Error Handling methods and is currently not intended to used as an stable application.
+
+### 👋 PyPhone is fully open source and you are always welcome for any contribution.
+<a title="Open Source Initiative official SVG, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Opensource.svg"><img width="64" alt="Opensource" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Opensource.svg/64px-Opensource.svg.png"></a>
