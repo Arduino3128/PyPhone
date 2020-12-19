@@ -16,6 +16,14 @@ PyPhone a fully Open Sourced Python Based GUI VoIP Calling App which enables Cal
   
 ## How to use PyPhone?  
 Since, PyPhone uses ngrok, it is required to make an account in [ngrok](https://ngrok.com/). PyPhone comes with Ngrok.  
+### Modules:  
+1. requests  
+2. pyaudio  
+3. mysql-connector-python  
+4. PyQt5  
+5. playsound  
+6. json  
+  
 ### Steps:  
 1. Make a file named "ngrok.yml" in the same level as of PyPhone.py and add the following line:  
     `authtoken: <YOUR_NGROK_AUTHTOKEN>`  
