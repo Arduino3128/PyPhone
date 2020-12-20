@@ -46,7 +46,7 @@ pyphone(Database)------> data(Table) ------------> [Phoneno varchar(12) --------
 ![image](images/Image2.png)
 ![image](images/Image3.png)
 
-### ⚠️ Disclaimer: PyPhone is still in its early phase and is in no way near to a stable release. Also, there is no guarantee of its stablity and is susceptible of crashes. PyPhone still requires proper Error Handling methods and is currently not intended to used as an stable application.
+### ⚠️ Disclaimer: PyPhone is still in its early phase and is in no way near to a stable release. Also, there is no guarantee of its stablity and is susceptible to crashes. PyPhone still requires proper Error Handling methods and is currently not intended to be used as a stable application.
 
 ### 👋 PyPhone is fully open source and you are always welcome for any contribution.
 
