@@ -17,6 +17,7 @@ import threading
 import socket
 import re
 import time
+import sys
 
 with open("ngrok.yml",'r') as NGROKFILE:
 	NGROK=NGROKFILE.read()
@@ -24,17 +25,18 @@ NGROK=NGROK.split(': ')
 Initiator.initiateServer(NGROK[1])
 
 NumberDialed=""
-conn=mysql.connector.connect(
-	host="localhost",
-	user="<YOUR_DB_USER>",
-	passwd="<YOUR_DB_PASS>",
-	database="PyPhone"
-)
-c=conn.cursor(buffered=True)
 with open("config.cnf",'r') as CONF:
 	CONFDATA=CONF.read()
-PHONENO=CONFDATA
+CONFDATA=CONFDATA.split(" | ")
+PHONENO=CONFDATA[0]
 print(PHONENO)
+conn=mysql.connector.connect(
+	host=CONFDATA[1],
+	user=CONFDATA[2],
+	passwd=CONFDATA[3],
+	database=CONFDATA[4]
+)
+c=conn.cursor(buffered=True)
 CALLSTAT=False
 ACK=''
 FIRST=True
@@ -204,10 +206,13 @@ class ClientThread(QThread):
 			Phoneno=NumberDialed
 			c.execute("Select * from data where Phoneno=%s"%Phoneno)
 			GETDATA=c.fetchone()
-			PORT=int(GETDATA[1])
-			SOCK=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-			SOCK.connect((IP,PORT))
-			CLIENTCONN(SOCK)
+			try:
+				PORT=int(GETDATA[1])
+				SOCK=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+				SOCK.connect((IP,PORT))
+				CLIENTCONN(SOCK)
+			except:
+				pass
 		GETPORT()
 
 class Ui_MainWindow(QWidget):
@@ -990,7 +995,7 @@ class Ui_MainWindow(QWidget):
 		self.TopBar.mousePressEvent=pressWindow
 		self.TopBar.mouseReleaseEvent=releasedWindow
 
-		self.Exit.clicked.connect(lambda:exit())
+		self.Exit.clicked.connect(lambda:sys.exit())
 		global FIRST,CALLSTAT,NumberDialed
 		self.SERVERTHREADRUNNER=ServerThread()
 		CALLSTAT=False
@@ -1005,7 +1010,10 @@ class Ui_MainWindow(QWidget):
 	def ENDCALL(self):
 		global CALLSTAT,CIP
 		CALLSTAT=True
-		CIP.close()
+		try:
+			CIP.close()
+		except:
+			pass
 		self.setupUi(MainWindow)
 
 	def PICKUPCALL(self):
@@ -1122,7 +1130,6 @@ class Ui_MainWindow(QWidget):
 "<p dir=\'rtl\' style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Incomming Call from</p></body></html>"))
 
 if __name__ == "__main__":
-	import sys
 	app = QtWidgets.QApplication(sys.argv)
 	app.setStyleSheet('QMainWindow{background-color: darkgray;border: 1px solid black;}')
 	MainWindow = QtWidgets.QMainWindow()
